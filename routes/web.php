@@ -14,3 +14,14 @@
 Route::get('/', function () {
     return view('welcome');
 });
+
+// this route can return the state with the state id
+Route::get('temukanKota/{id}', 'Demo\dependent_dropdown\DependensiDropdownController@temukanKotadenganIDProvinsi');
+
+// Route::get('dropdownlist', 'DropdownController@getProvinsi');
+// Route::get('dropdownlist/getkota/{id}', 'DropdownController@getKota');
+
+Route::get('dropdownlist2', 'DropdownController@getProvinsi');
+Route::get('dropdownlist2/getkota/{id}', 'DropdownController@getKota');
+Route::get('dropdownlist2/getkecamatan/{id}', 'DropdownController@getKecamatan');
+Route::get('dropdownlist2/getdesa/{id}', 'DropdownController@getDesa');
